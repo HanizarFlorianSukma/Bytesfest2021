@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selamat Datang di e-Learning Universitas Sebelas Maret (UNS)</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="assets/css/indexStyle.css">
+
+  <!-- LINK FONTS POPPINS -->
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<!-- END OF HEAD -->
+
+<!-- BODY -->
+<body>
+	<!-- CONTAINER -->
+	<div class="container" id="formLogin">
+		<!-- BACKGROUND FORM LOGIN / SIGNUP -->
+		<div class="backgroundForm">
+			<div class="box signin">
+				<h1>Selamat Datang</h1>
+				<p>di e-learning Universitas Sebelas Maret<br>Sudah punya akun?</p><br>
+				<button class="btnMasuk" href="#"><span></span>MASUK</button>
+			</div>
+			<div class="box signup">
+				<h1>Selamat Datang</h1>
+				<p>di e-learning Universitas Sebelas Maret<br>Belum punya akun?</p><br>
+				<button class="btnDaftar"><span></span>DAFTAR</button>
+			</div>
+    </div>
+		<!-- END OF BACKGROUND FORM LOGIN / SIGNUP -->
+		<!-- FORM BOX FOR LOGIN / SIGNUP -->
+		<div class="formBox">
+			<!-- FORM BOX FOR LOGIN -->
+			<div class="form signinForm">
+				<form action="">
+					<div class="header">
+						<img src="assets/images/Header_UNS.png" alt="Header Login">
+					</div>
+					<input type="text" name="" id="" placeholder="NPM">
+					<input type="password" name="" id="" placeholder="Kata Sandi">
+					<div class="checkbox">
+						<input type="checkbox" id="ingatSaya" name="ingatSaya"><label for=ingatSaya> Ingat Saya</label>
+						<a href="#" class="lupaKataSandi" style="text-align:left;">Lupa Kata Sandi</a>
+					</div>
+					<div id="btnMasuk">
+						<a href="dashboard.html">MASUK</a>
+					</div>
+				</form>
+			</div>
+			<!-- END OF FORM BOX FOR LOGIN -->
+
+			<!-- FORM BOX FOR SIGNUP -->
+			<div class="form signupForm">
+				<form action="">
+					<h2>Daftar Akun</h2>
+					<input type="text" name="" id="" placeholder="Nama Pengguna">
+					<input type="text" name="" id="" placeholder="NPM">
+					<input type="email" name="" id="" placeholder="Email">
+					<input type="password" name="" id="" placeholder="Kata Sandi">
+					<input type="password" name="" id="" placeholder="Verifikasi Kata Sandi">
+					<div id="btnDaftar">
+						<a href="dashboard.html">DAFTAR</a>
+					</div>
+				</form>
+			</div>
+			<!-- END FORM BOX FOR SIGNUP -->
+		</div>
+		<!-- END FORM BOX FOR LOGIN / SIGNUP -->
+    </div>
+	<!-- END OF CONTAINER -->
+
+	<!-- SCRIPT JAVASCRIPT -->
+	<script>
+		const btnMasuk = document.querySelector('.btnMasuk');
+		const btnDaftar = document.querySelector('.btnDaftar');
+		const formBox = document.querySelector('.formBox');
+		const body = document.querySelector('body');
+
+		btnDaftar.onclick = function() {
+				formBox.classList.add('active')
+		}
+
+		btnMasuk.onclick = function() {
+				formBox.classList.remove('active')
+		}
+	</script>
+	<!-- END OF SCRIPT JAVASCRIPT -->
+
+</body>
+	<!-- END OF BODY -->
+</html>

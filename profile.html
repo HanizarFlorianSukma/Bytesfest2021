@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="assets/css/profile.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+			<!-- START LEFT SIDEBAR -->
+			<div class="col-auto px-0 bg-info-custom">
+				<nav id="sidebar">
+						<div class="sidebar-header">
+								<div id="closeSidebar">
+										<i class="fas fa-times h1 end-0 top-0 me-3 mt-3 position-absolute"></i>
+								</div>
+								<img src="assets/images/Logo_Portal_Spada_UNS.png" class="pt-4 img-fluid d-block mx-auto my-auto" width="80%">
+						</div>
+						<hr>
+		
+						<ul class="list-unstyled components">
+								<li>
+										<a href="dashboard.html" class="active">
+												<i class="ms-4 me-2 fas fa-tachometer-alt"></i>
+												Dashboard
+										</a>
+								</li>
+								<li>
+										<a href="daftar-matkul.html">
+												<i class="ms-4 me-2 fas fa-book-open"></i>
+												Daftar Mata Kuliah
+										</a>
+								</li>
+								<li>
+										<a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
+												<i class="ms-4 me-2 fas fa-book"></i>
+												Mata Kuliah
+										</a>
+										<ul class="collapse list-unstyled" id="homeSubmenu">
+												<li>
+														<a href="informasi-kelas.html">Multimedia Dasar Teori</a>
+												</li>
+												<li>
+														<a href="informasi-kelas.html">Sistem Operasi Teori</a>
+												</li>
+												<li>
+														<a href="informasi-kelas.html">Web Design Praktik</a>
+												</li>
+												<li>
+														<a href="informasi-kelas.html">Sistem Operasi Praktik</a>
+												</li>
+												<li>
+														<a href="informasi-kelas.html">Pendidikan Pancasila</a>
+												</li><li>
+														<a href="informasi-kelas.html">Pemrograman Dasar</a>
+												</li>
+										</ul>
+								</li>
+								<li>
+										<a href="kehadiran.html">
+												<i class="ms-4 me-2 fas fa-user-check"></i>
+												Kehadiran
+										</a>
+								</li>
+								<li>
+										<a href="rekap-nilai.html">
+												<i class="ms-4 me-2 fas fa-trophy"></i>
+												Rekap Nilai
+										</a>
+								</li>
+								<li>
+										<a href="#">
+												<i class="ms-4 me-2 fas fa-comment-alt"></i>
+												Pesan
+										</a>
+								</li>
+						</ul>
+				</nav>
+			</div>
+			<!-- END LEFT SIDEBAR -->
+
+
+      <div class="col">
+        <main class="container-fluid">
+
+          <!-- Nabar -->
+
+          <!-- START NAVBAR -->
+          <nav class="navbar navbar-expand-lg bg-white shadow-sm" style="margin-left:-36px; margin-right:-36px">
+            <div class="container-fluid" style="margin-top:-40px">
+                <button type="button" id="sidebarCollapse" class="btn" style="margin-top:35px; background:#42A5F6">
+                    <i class="fas fa-align-left text-white"></i>
+                </button>
+                <a class="navbar-brand ms-3" style="margin-top:35px" href="#"><strong>SPADA UNS</strong></a>
+                <button class="navbar-toggler" style="margin-top:35px; margin-right:-20px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <img id="img-profile-toggler" src="assets/images/profile-picture (8).png" style="width:40px;" alt="Profile Pengguna" class="img-fluid rounded-circle">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-top:38px">
+                    <ul class="navbar-nav mx-auto justify-content-center align-items-center text-center">
+                        <li class="nav-item">
+                            <a class="dropdown-item-toggler" href="profile.html">Lihat Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item-toggler" href="index.html">Keluar</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <form class="d-flex me-2 w-100">
+                            <div class="input-group" id="search-box">
+                            <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="search" id="search-input">
+                            <span class="input-group-append">
+                                <button id="search-icon" class="ms-2 btn btn-outline-secondary border-start-0 border rounded-pill ms-n3" type="button">
+                                <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            <div class="notification" style="margin-top:-10px">
+                                <svg class="svg-inline--fa fa-bell fa-w-14 h4 ms-4 text-black mt-3 me-3" style="cursor:pointer" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+                            </div>
+                            </div>
+                        </form>
+                        <div class="dropdown">
+                            <img id="img-profile" src="../bytesfest/assets/images/profile-picture (8).png" style="width:40px;" alt="Profile Pengguna" class="img-fluid rounded-circle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            </img>
+                                <ul class="dropdown-menu" style="margin-left:-100px;">
+                                    <li><a class="dropdown-item" href="profile.html">Lihat Profil</a></li>
+                                    <li><a class="dropdown-item" href="index.html">Keluar</a></li>
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </nav>
+          <!-- END NAVBAR -->
+
+          <!-- START CONTENT -->
+					<div class="row mt-2 mb-5">
+							<div class="container-fluid">
+									<div class="row">
+											<div class="col">
+													<!-- JUDUL PAGE -->
+													<div class="d-sm-flex align-items-center justify-content-between mb-3 mt-4">
+																	<h4 class=" mb-0 text-gray-800" style="font-family: Poppins; font-weight: bold;">Informasi Kelas</h4>
+													</div>
+													<!-- END JUDUL PAGE -->
+
+													<!-- CARD HEADER -->
+													<div class="card rounded-4 shadow" style="max-width: 1450px;">
+															<img id=profile-header src="assets/images/HEADER.png" class="card-img-top" style="border-radius:25px 25px 0 0 ;">
+															<div id="cardheader" class="card-body">
+															<div class="row">
+																	<div class="col-md-2">
+																	<img id="profile-photo-profile" src="assets/images/profile-picture (8).png">
+																	</div>
+																	<div class="col-md-8 custom-text-desk">
+																	<h4 class="text-content-judul mt-1" style="font-weight: bold;">Hanizar Florian Sukma</h4>
+																	<h5 class="text-content">
+																			K3521033 <br>
+																			Pendidikan Teknik Informatika dan Komputer
+																	</h5>
+																	</div>
+																	<div class="col-md-2">
+																		<button id="edit-profile"type="button" class="btn btn-primary">Edit Profil</button>
+																	</div>
+															</div>
+															
+															</div>
+													</div>
+													<!-- END OF CARD HEADER -->
+
+													<!-- CARD CONTENT -->
+													<div class="row row-cols-1 row-cols-md-2 g-4" style="max-width: 1470px; margin-top: 0;">
+															<div class="col-md-4">
+															<div class="card rounded-4 shadow">
+																	
+																	<table style="margin-top: 25px; margin-bottom: 20px; margin-left: 10%;">
+																	<tr>
+																			<td style="width: 50px;">
+																			<h3><i class="fas fa-book-open" style="color: #42A5F6;"></i></h3>
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<h5>Mata Kuliah Aktif</h5>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Multimedia Dasar Teori</a>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Sistem Operasi Teori</a>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Web Design Praktik</a>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Sistem Operasi Praktik</a>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Pendidikan Pancasila</a>
+																			</td>
+																	</tr>
+																	<tr>
+																			<td style="width: 50px;">
+																			</td>
+																			<td class="text-content-judul" style="font-weight: bold;">
+																			<a href="informasi-kelas.html" class="text-info-custom" style="text-decoration: none;">Pemrograman Dasar</a>
+																			</td>
+																	</tr>
+																	</table>
+															</div>
+															</div>
+															<div class="col-md-8">
+															<div class="card rounded-4 shadow">
+																	<div id="user-detail" style="margin-left: 10%; margin-top: 25px; margin-bottom: 20px;">
+																	<h3 class="text-content-judul" style="font-weight: bold;">User Detail</h3>
+																	<br>
+																	<h5 class="">
+																			<b>Email Address</b><br>
+																	</h5>
+																	<h6 class="">
+																			hanizarfs@gmail.com
+																	</h6>
+
+																	<br>
+
+																	<h5 class="">
+																			<b>Nama Lenghkap</b><br>
+																	</h5>
+																	<h6>
+																			Hanizar Florian Sukma
+																	</h6>
+
+																	<br>
+
+																	<h5 class="">
+																			<b>Fakultas</b><br>
+																	</h5>
+																	<h6>
+																			Keguruan dan Ilmu Pendidikan
+																	</h6>
+
+																	<br>
+
+																	<h5 class="">
+																			<b>Program Studi</b><br>
+																	</h5>
+																	<h6>
+																			Pendidikan Teknik Informatika dan Komputer
+																	</h6>
+																	</div>
+															</div>
+															</div>
+													</div>
+													<!-- END OF CARD CONTENT -->
+
+											</div>
+									</div>
+							</div>
+					</div>
+					<!-- END CONTENT -->
+
+        </main>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="row">
+      <footer>
+        <div class="d-flex justify-content-center">
+          <img class="m-3 mb-0" src="assets/images/Logo_UNS.png" width="45" alt="logo-uns"> 
+          <img class="m-3 mb-0" src="assets/images/Logo_MikroptikUNS.png" width="45" alt="logo-mkriptik">
+          <img class="m-3 mb-0" src="assets/images/Logo_Bytesfest.png" width="45" alt="logo-bs">
+          
+        </div>
+        <div class="d-flex justify-content-center footer-link1">
+          <a href="dashboard.html" class="mb-1 ms-3 m-3 text-center">DASHBOARD</a>
+          <a href="daftar-matkul.html" class="mb-1 ms-3 m-3 text-center">MATA KULIAH</a>
+          <a href="kehadiran.html" class="mb-1 ms-3 m-3 text-center">KEHADIRAN</a>
+          <a href="rekap-nilai.html" class="mb-1 ms-3 m-3 text-center">REKAP NILAI</a>
+        </div>
+        <div class="d-flex justify-content-center footer-link2 mb-2">
+          <a href="#" class="ms-2">CONTACT</a>&nbsp; |&nbsp;
+          <a href="#" class="ms-2">BLOG</a> &nbsp; |&nbsp;
+          <a href="#" class="ms-2">SOCIAL MEDIA</a>
+        </div>
+        
+      </footer>
+      <div class="d-flex justify-content-center bg-dark">
+        <span class="text-white p-2">
+          <span class="fas fa-copyright"></span> Linus Team - All Right Reserved
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('li').on('click', function(){
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            })
+        })
+    </script>
+  
+  <!-- SCRIPT JS - SIDEBAR COLLAPSE -->
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+          });
+      });
+      
+      document.getElementById('closeSidebar').addEventListener('click', () => {
+          document.getElementById('sidebar').classList.remove('active')
+      });
+  </script>
+
+</body>
+</html>

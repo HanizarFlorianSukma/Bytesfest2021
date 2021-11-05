@@ -1,0 +1,132 @@
+body {
+    background-color: whitesmoke;
+  }
+
+  .footer-link1{
+    font-size: 14px;
+  }
+  
+  .footer-link1 a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .footer-link2{
+    font-size: 12px;
+  }
+  
+  .footer-link2 a{
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .rounded-4 {
+    border-radius: 25px;
+  }
+
+  .rounded-matkul {
+      border-radius: 15px;
+  }
+
+  .custom-shadow {
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .bg-info-custom {
+    background-color: #42A5F6;
+  }
+
+  .text-info-custom {
+    color: #42A5F6;
+  }
+
+  .text-content-judul {
+      font-family: Poppins;
+      color: #000000;
+  }
+
+  .text-content {
+      font-family: Poppins;
+      color: #666666;
+  }
+
+  .circle {
+      background-color: white;
+      border-radius: 50%;
+      border: 1px solid grey;
+      padding: 10px;
+    }
+
+    /* TAMBAHAN CSS REKAP NILAI */
+    .icon {
+      color: #42A5F6;
+    }
+
+    .text-matkul h5 {
+      font-weight: bold;
+      margin-left: 30px;
+    }
+
+    #nilai-matkul {
+      text-align: center;
+      margin: auto;
+      max-width: 95px;
+    }
+
+    #img-nilai {
+      max-width: 70px;
+    
+    }
+    
+    .card-animation:hover {
+      transform: scale(1.05);
+    } 
+  
+    .card-animation {
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+  
+  @media only screen and (max-width: 600px) {
+ 
+    #img-profile {
+      margin-top: 10px;
+    }
+    .footer-link1{
+      font-size: 12px;
+      flex-direction: column;
+    }
+
+    .search-icon {
+      float: right;
+      margin-top: 20px;
+      margin-left: 250px;
+      position: absolute;
+      z-index: 2;
+      color: black;
+    }
+
+    /* TAMBAHAN CSS REKAP NILAI */
+
+    #text-matkul-resp {
+      max-width: 190px;
+      text-align: left;
+      margin-left: -10px;
+     
+     
+    }
+
+    .text-matkul h5 {
+      font-weight: normal;
+    }
+
+  
+    #nilai-matkul {
+     
+      max-width: 95px;
+      margin-right: 20px;
+   
+    }    
+  }
